@@ -8,3 +8,15 @@ In order to be able to use this code, you need to run the following commands:
 $ sudo apt update
 $ sudo apt install cmake git build-essential
 ```
+### Installation
+To run the C++ implementations in this repo, you can either download the already build artifacts from the latest job in the **Actions** tab or you can run the following commands:
+```bash
+$ git clone https://github.com/ahmedfawzyelaraby/cracking-the-coding-interview
+$ cd cracking-the-coding-interview
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make -j
+```
+### Run
+To run the examples you will need to check the implemented code to the expected input from each of them.
