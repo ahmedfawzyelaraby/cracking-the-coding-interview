@@ -1,0 +1,19 @@
+name: Build All Examples
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build Problem Implementations
+      working-directory: ./
+      run: mkdir build && cd build && cmake .. && make -j
+    - name: Add Artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: cracking-the-coding-interview-problems
+        path: ./build/chapter-*
